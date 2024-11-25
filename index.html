@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshiv - Organic Products</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .product-card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .product-card h3 {
+            margin-bottom: 20px;
+        }
+        .product-card p {
+            margin-bottom: 20px;
+        }
+
+        /* Image Styling */
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Chatbot Styling */
+        #chatbot-container {
+            position: fixed;
+            bottom: 80px; /* Adjusted for spacing */
+            right: 20px;
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #chat-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #chat-content {
+            padding: 10px;
+            overflow-y: scroll;
+            height: 350px;
+        }
+        .message {
+            margin: 10px 0;
+        }
+        .user-message {
+            text-align: right;
+        }
+        .bot-message {
+            text-align: left;
+        }
+        #user-input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        #user-input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        #send-btn {
+            width: 20%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rakshiv - 100% Organic Products</h1>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<!-- Banner Image Section -->
+<div class="banner">
+    <img src="https://i.postimg.cc/855jTLkz/banner.jpg" alt="banner" class="banner">
+</div>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Rakshiv! We pride ourselves on offering 100% organic, high-quality products designed for your health and wellness. Our commitment to natural ingredients ensures that you get the best care from nature.</p>
+</section>
+
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://i.postimg.cc/XNx6wtgm/oil.jpg" alt="Hair Growth Oil" class="product-image">
+            <h3>Hair Growth Oil</h3>
+            <p>Price: 500 INR</p>
+            <p>Our 100% organic hair growth oil nourishes your scalp and promotes healthy hair growth.</p>
+        </div>
+        <div class="product-card">
+            <img src="https://i.postimg.cc/NF28f3GF/pack.jpg" alt="Face De-Tan Pack" class="product-image">
+            <h3>Face De-Tan Pack</h3>
+            <p>Price: 350 INR</p>
+            <p>Get rid of unwanted tan and reveal brighter skin with our organic face de-tan pack.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>For inquiries or orders, feel free to reach out to us at:</p>
+    <p>Email: info@rakshiv.com | Phone: +91-1234567890</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Rakshiv. All rights reserved.</p>
+</footer>
+
+<!-- Chatbot Container -->
+<div id="chatbot-container">
+    <div id="chat-header">Chatbot</div>
+    <div id="chat-content"></div>
+    <div id="user-input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<div id="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<script>
+    function toggleChatbot() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        chatbotContainer.style.display = chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '' ? 'flex' : 'none';
+    }
+
+    document.getElementById('send-btn').addEventListener('click', function() {
+        const userInput = document.getElementById('user-input').value;
+        if (userInput.trim() === '') return; // Prevent empty messages
+        
+        const chatContent = document.getElementById('chat-content');
+        
+        // Display user message
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.classList.add('message', 'user-message');
+        userMessageDiv.textContent = userInput;
+        chatContent.appendChild(userMessageDiv);
+        
+        // Send user input to the Flask backend
+        fetch('/chatbot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display bot response
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.classList.add('message', 'bot-message');
+            botMessageDiv.textContent = data.response;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        })
+        .catch(error => console.error('Error:', error));
+
+        // Clear user input
+        document.getElementById('user-input').value = '';
+    });
+</script>
+</body>
+</html>
